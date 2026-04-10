@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lex – GED ELA Study Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+      <div class="logo">
+        <span class="logo-icon">✦</span>
+        <span class="logo-text">Lex</span>
+      </div>
+      <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">✕</button>
+    </div>
+
+    <nav class="topic-nav">
+      <p class="nav-label">Study Topics</p>
+      <button class="topic-btn" data-topic="reading">📖 Reading for Meaning</button>
+      <button class="topic-btn" data-topic="analysis">🔍 Text Analysis</button>
+      <button class="topic-btn" data-topic="grammar">✏️ Grammar & Language</button>
+      <button class="topic-btn" data-topic="vocabulary">📚 Vocabulary</button>
+      <button class="topic-btn" data-topic="writing">🖊️ Writing Skills</button>
+      <button class="topic-btn" data-topic="essay">📝 Essay Structure</button>
+    </nav>
+
+    <div class="sidebar-footer">
+      <button class="clear-btn" id="clearBtn">↺ Start New Session</button>
+      <p class="footer-note">Your coach is here to guide you — not give away the answers. You've got this!</p>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+      <div class="topbar-title">
+        <span class="topbar-name">Lex</span>
+        <span class="topbar-sub">GED ELA Study Coach</span>
+      </div>
+      <div class="status-dot" id="statusDot" title="Connected"></div>
+    </header>
+
+    <!-- Chat area -->
+    <section class="chat-area" id="chatArea">
+      <!-- Welcome card -->
+      <div class="welcome-card" id="welcomeCard">
+        <div class="welcome-icon">✦</div>
+        <h1 class="welcome-title">Hi, I'm Lex.</h1>
+        <p class="welcome-sub">Your personal GED English Language Arts study coach. I'm here to help you <em>understand</em> — not just memorize.</p>
+        <div class="quick-starts">
+          <button class="quick-btn" data-prompt="I need help understanding how to find the main idea in a passage.">Find the main idea</button>
+          <button class="quick-btn" data-prompt="Can you explain subject-verb agreement to me?">Subject-verb agreement</button>
+          <button class="quick-btn" data-prompt="How do I write a strong thesis statement for the GED essay?">Writing a thesis</button>
+          <button class="quick-btn" data-prompt="Help me use context clues to figure out vocabulary words.">Context clues</button>
+          <button class="quick-btn" data-prompt="What are some strategies for the GED extended response?">Extended response tips</button>
+          <button class="quick-btn" data-prompt="I have a practice question I'd like to work through with you.">Work through a question</button>
+        </div>
+      </div>
+
+      <!-- Messages will be injected here -->
+      <div class="messages" id="messages"></div>
+    </section>
+
+    <!-- Input area -->
+    <footer class="input-area">
+      <div class="input-wrapper">
+        <textarea
+          id="userInput"
+          class="user-input"
+          placeholder="Ask a question, share a practice problem, or tell me what you're struggling with…"
+          rows="1"
+          autocomplete="off"
+          spellcheck="true"
+        ></textarea>
+        <button class="send-btn" id="sendBtn" aria-label="Send message" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <p class="input-disclaimer">Lex guides your thinking — answers come from <em>you</em>.</p>
+    </footer>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
